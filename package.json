@@ -1,0 +1,26 @@
+{
+  "name": "mern-demo-project",
+  "version": "1.0.0",
+  "description": "A social network for developers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server":"nodemon server"
+  },
+  "author": "Dhruv S",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "config": "^4.0.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "gravatar": "^1.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.3",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
+  }
+}
