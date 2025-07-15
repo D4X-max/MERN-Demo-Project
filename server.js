@@ -1,7 +1,15 @@
+require('dotenv').config(); // <== Load env vars from .env file
 const express = require('express');
 const connectDB = require('./config/db');
+
 const app = express();
+
+// Connect Database
 connectDB();
+
+// Init Middleware (optional: to parse JSON)
+app.use(express.json());
+
 app.get('/', (req, res) => res.send('API running'));
 
 // Define routes
@@ -12,6 +20,7 @@ app.use('/api/posts', require('./routes/api/posts'));
 
 const PORT = process.env.PORT || 5000;
 
-app.listen (PORT, () => console.log(`Server started on ${PORT}`));
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
 
 
